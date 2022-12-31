@@ -8,7 +8,7 @@ t = time.localtime()
 y = t.tm_year
 mon = t.tm_mon
 d = t.tm_mday
-h = t.tm_hour
+h = t.tm_hour + 9
 if h >= 24:
     h -= 24
 min = t.tm_min
@@ -68,7 +68,7 @@ with st.sidebar:
         y = t.tm_year
         mon = t.tm_mon
         d = t.tm_mday
-        h = t.tm_hour
+        h = t.tm_hour + 9
         min = t.tm_min
         s = t.tm_sec
 
