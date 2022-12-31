@@ -63,8 +63,8 @@ with st.sidebar:
     if output.count("\n") > 10:
         for i in range(output.count('\n') - 10):
             point = output.find("\n")
-            output = output[point:]
-            
+            output = output[point+1:]
+
     chat = st.code(output)
 
     box = st.text_input(label="닉네임을 입력해주세요")
@@ -117,7 +117,7 @@ with st.sidebar:
         if output.count("\n") > 10:
             for i in range(output.count('\n')-10):
                 point = output.find("\n")
-                output = output[point:]
+                output = output[point+1:]
 
         chat.text(output)
         chat.code(output)
