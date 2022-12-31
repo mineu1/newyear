@@ -9,6 +9,8 @@ y = t.tm_year
 mon = t.tm_mon
 d = t.tm_mday
 h = t.tm_hour + 9
+if h >= 24:
+    h -= 24
 min = t.tm_min
 s = t.tm_sec
 
@@ -34,6 +36,7 @@ if days < 0:
     minutes = 0
     seconds = 0
     mil = 0
+    st.balloons()
 
 st.title("새해까지 남은시간 : {}일 {}시간 {}분 {}초 {}밀리초".format(days, hours, minutes, seconds, mil))
 st.header("현재시각 : {}년 {}월 {}일 {}시 {}분 {}초 {}밀리초".format(y, mon, d, h, min, s, ml))
