@@ -12,6 +12,13 @@ h = t.tm_hour + 9
 if h >= 24:
     d += 1
     h -= 24
+    if d > 31:
+        d = 1
+        mon += 1
+        if mon > 12:
+            mon = 1
+            y += 1
+            
 min = t.tm_min
 s = t.tm_sec
 
@@ -121,10 +128,6 @@ with st.expander("채팅"):
 
         chat.text(output)
         chat.code(output)
-        #st.info(output, icon="ℹ️")
-        #a = st.caption("-------------------------\n총" + str(output.count("\n")) + "명이 설문조사에 참여했습니다")
-        #chart(output)
-        #chartb(output)
 
         st.snow()
 
