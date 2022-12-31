@@ -53,7 +53,7 @@ if days >= 0:
 else:
     my_bar.progress(100)
 
-with st.sidebar:
+with st.expander("채팅"):
     st.header("채팅")
 
     inflobj = open(file, 'r', encoding='utf-8')
