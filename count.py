@@ -18,7 +18,7 @@ if h >= 24:
         if mon > 12:
             mon = 1
             y += 1
-            
+
 min = t.tm_min
 s = t.tm_sec
 
@@ -83,6 +83,8 @@ with st.expander("채팅"):
         mon = t.tm_mon
         d = t.tm_mday
         h = t.tm_hour + 9
+        if h >= 24:
+            h -= 24
         min = t.tm_min
         s = t.tm_sec
 
