@@ -59,6 +59,12 @@ with st.sidebar:
     inflobj = open(file, 'r', encoding='utf-8')
     output = inflobj.read()
     inflobj.close()
+
+    if output.count("\n") > 10:
+        for i in range(output.count('\n') - 10):
+            point = output.find("\n")
+            output = output[point:]
+            
     chat = st.code(output)
 
     box = st.text_input(label="닉네임을 입력해주세요")
