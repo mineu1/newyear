@@ -10,6 +10,7 @@ mon = t.tm_mon
 d = t.tm_mday
 h = t.tm_hour + 9
 if h >= 24:
+    d += 1
     h -= 24
 min = t.tm_min
 s = t.tm_sec
