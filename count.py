@@ -75,7 +75,7 @@ with st.sidebar:
 
         datetime.datetime.now()
         start_time = datetime.datetime.now()
-        end_time = datetime.datetime(2023, 1, 1)
+        end_time = datetime.datetime(2022, 12, 31, 15)
         how_long = end_time - start_time
         days = how_long.days
         hours = how_long.seconds // 3600
