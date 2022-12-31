@@ -96,7 +96,7 @@ with st.sidebar:
 
 
 
-        wri = ("{} : {} -({}시 {}분 {}, 새해까지 {}시 {}분 {}초)").format(box, message, h, min, s, hours, minutes, seconds)
+        wri = ("{} : {} -({}:{}:{}, 새해까지 {}:{}:{})").format(box, message, h, min, s, hours, minutes, seconds)
 
         inflobj = open(file, 'a', encoding='utf-8')
 
