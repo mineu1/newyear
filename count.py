@@ -42,7 +42,7 @@ if days < 0:
 st.title("새해까지 남은시간 : {}일 {}시간 {}분 {}초 {}밀리초".format(days, hours, minutes, seconds, mil))
 st.header("현재시각 : {}년 {}월 {}일 {}시 {}분 {}초 {}밀리초".format(y, mon, d, h, min, s, ml))
 
-
+st.text("\n\n1시간 타이머")
 my_bar = st.progress(0)
 
 if days >= 0:
@@ -107,6 +107,11 @@ with st.sidebar:
         inflobj = open(file, 'r', encoding='utf-8')
         output = inflobj.read()
         inflobj.close()
+
+        if output.count("\n") > 10:
+            for i in range(output.count('\n')-10):
+                point = output.find("\n")
+                output = output[point:]
 
         chat.text(output)
         chat.code(output)
